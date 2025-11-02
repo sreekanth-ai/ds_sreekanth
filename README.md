@@ -1,118 +1,97 @@
 # ds_sreekanth
 
-📊 Trader Performance & Market Sentiment Analysis
-🧠 Project Overview
+## 📊 Trader Performance & Market Sentiment Analysis
+## 🧠 Project Overview
 
 This project analyzes the relationship between trader performance and market sentiment using historical cryptocurrency trading data combined with the Fear-Greed Index.
 The goal is to uncover how sentiment phases (Extreme Fear → Extreme Greed) influence profitability, volatility, and strategic trading outcomes.
 
-🗂️ Dataset Information
+## 🗂️ Dataset Information
 
-Files Used:
+**Files included**
+- `trades.csv` — 211,224 trading records  
+- `sentiment.csv` — 2,644 daily Fear‑Greed Index readings  
+- `merged_dataset.csv` — 35,864 trades aligned with sentiment data  
 
-trades.csv → Contains 211,224 trading records
+**Date Range:** January 2023 – May 2025  
+**Key Columns:** `Date`, `PnL`, `Trade_Type` (BUY/SELL), `Sentiment_Class`, `Sentiment_Score`
 
-sentiment.csv → 2,644 daily Fear-Greed Index readings
+## ⚙️ Data Processing & Methodology
 
-merged_dataset.csv → 35,864 trades aligned with sentiment data
-
-Date Range: January 2023 – May 2025
-Key Columns:
-
-Date, PnL, Trade Type (BUY/SELL), Sentiment, Sentiment Score
-
-⚙️ Data Processing & Methodology
-
-Data Cleaning & Merging:
-
-Standardized timestamps and merged trading and sentiment data.
-
-Removed null and inconsistent records.
-
-Feature Engineering:
-
-Classified sentiment into 5 phases (Extreme Fear → Extreme Greed).
-
-Computed key metrics: mean, median, and standard deviation of PnL.
-
-Analysis Performed:
-
-Performance comparison across sentiment phases.
-
-Long vs. Short strategy analysis.
-
-Volatility and risk-reward profiling.
-
-Correlation between sentiment and PnL.
-
-📈 Key Findings
-
-Extreme Greed: Highest profits but highest volatility.
-
-Fear: Second-best returns — profitable contrary to common belief.
-
-Extreme Fear: Lowest profits, lowest volatility — stable but slow.
-
-Contrarian Strategy Works: Short during Greed, Long during Fear.
-
-📉 Visuals Included
-
-(Placeholders — visuals generated in Jupyter Notebook)
-
-Figure 1: Sentiment Distribution
-
-Figure 2: PnL Distribution by Sentiment
-
-Figure 3: BUY vs SELL Performance by Sentiment
-
-Figure 4: Volatility vs Average PnL
+1. **Data cleaning & merging**
+   - Standardized timestamps, removed invalid records, and performed an inner join on date.
+2. **Feature engineering**
+   - Binned sentiment scores into categories: Extreme Fear, Fear, Neutral, Greed, Extreme Greed.
+   - Computed summary statistics (mean, median, std) for PnL.
+3. **Analysis**
+   - Aggregations by sentiment class and trade direction.
+   - Volatility (std) and risk‑reward profiling.
+   - Correlation analysis between sentiment score and PnL.
 
 
-🧾 Report
+## 📈 Key Findings
 
-The full project report, “Trader_Performance_Sentiment_Report.docx”, contains:
+- **Extreme Greed:** Highest average returns ($205.82) and highest volatility ($1,861.56). High risk, high reward.  
+- **Fear:** Second-highest returns ($128.29) with substantial volatility — long positions during Fear were surprisingly profitable.  
+- **Extreme Fear:** Lowest returns ($1.89) and lowest volatility ($76.73) — capital preservation phase.  
+- **Strategy insight:** Contrarian strategies work well — short during Extreme Greed, long during Fear.
 
-Executive Summary
 
-Data Overview
+## 📉 Visuals Included
 
-Exploratory Analysis
+Include these figures in the notebook and insert into the report:
+- **Figure 1:** Distribution of Sentiment Classes *(Placeholder)*  
+- **Figure 2:** PnL Distribution Histogram *(Placeholder)*  
+- **Figure 3:** PnL by Sentiment Boxplot *(Placeholder)*  
+- **Figure 4:** BUY vs SELL Performance per Sentiment *(Placeholder)*  
+- **Figure 5:** Volatility vs Mean PnL Scatter *(Placeholder)*  
+- **Figure 6:** Sentiment vs PnL Correlation Heatmap *(Placeholder)*
 
-Statistical Results
 
-Insights, Recommendations, and Limitations
+## 🧾 Report
 
-💻 Tools & Technologies
+### The full project report, “Trader_Performance_Sentiment_Report.docx”, contains:
 
-Python Libraries: pandas, matplotlib, seaborn, numpy
+- Executive Summary
 
-Notebook: Jupyter Notebook
+- Data Overview
 
-Visualization: Matplotlib/Seaborn
+- Exploratory Analysis
 
-Documentation: Microsoft Word
+- Statistical Results
 
-🚀 How to Run
+- Insights, Recommendations, and Limitations
 
-Download all files (.ipynb, .csv, .docx) into the same folder.
+## 💻 Tools & Technologies
 
-Open notebook_1.ipynb in Jupyter Notebook or Google Colab.
+- Python Libraries: pandas, matplotlib, seaborn, numpy
 
-Run all cells sequentially to reproduce the analysis.
+- Notebook: Jupyter Notebook
 
-View visuals and statistical results directly in the notebook.
+- Visualization: Matplotlib/Seaborn
 
-📚 Future Enhancements
+- Documentation: Microsoft Word
 
-Add time-series sentiment trend analysis.
+## 🚀 How to Run
 
-Build a predictive model using sentiment and PnL.
+- Download all files (.ipynb, .csv, .docx) into the same folder.
 
-Automate dashboard visualization for real-time insights.
+- Open notebook_1.ipynb in Jupyter Notebook or Google Colab.
+
+- Run all cells sequentially to reproduce the analysis.
+
+- View visuals and statistical results directly in the notebook.
+
+## 📚 Future Enhancements
+
+- Add time-series sentiment trend analysis.
+
+- Build a predictive model using sentiment and PnL.
+
+- Automate dashboard visualization for real-time insights.
 
 👤 Author
 
 Sreekanth Reddy Polu
 Data Science & Machine Learning Enthusiast
-📧 Email: [your email]
-💼 GitHub: [your GitHub profile link]
+<p>📩 Email: <a href="mailto:polusreekanthreddys@gmail.com">polusreekanthreddys@gmail.com</a></p>
