@@ -93,5 +93,5 @@ Include these figures in the notebook and insert into the report:
 👤 Author
 
 Sreekanth Reddy Polu
-Data Science & Machine Learning Enthusiast
+
 <p>📩 Email: <a href="mailto:polusreekanthreddys@gmail.com">polusreekanthreddys@gmail.com</a></p>
