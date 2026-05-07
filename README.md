@@ -1,97 +1,181 @@
-# ds_sreekanth
+# 📊 Trader Performance & Market Sentiment Analysis
 
-## 📊 Trader Performance & Market Sentiment Analysis
+## 📌 Domain
+Cryptocurrency Trading | Data Analytics | Market Sentiment Analysis
+
 ## 🧠 Project Overview
 
-This project analyzes the relationship between trader performance and market sentiment using historical cryptocurrency trading data combined with the Fear-Greed Index.
-The goal is to uncover how sentiment phases (Extreme Fear → Extreme Greed) influence profitability, volatility, and strategic trading outcomes.
+This project analyzes the relationship between cryptocurrency trader performance and overall market sentiment using historical trading data combined with the Fear & Greed Index.
+
+The objective is to understand how different market sentiment phases influence:
+
+* Profitability
+* Trading risk
+* Volatility
+* BUY/SELL strategy performance
+
+The project uncovers behavioral trading patterns and provides actionable insights for traders, analysts, and portfolio managers.
+
+---
+
+## 🎯 Project Objectives
+
+* Analyze trader profitability across market sentiment phases
+* Compare BUY vs SELL performance
+* Measure volatility under different sentiment conditions
+* Identify profitable contrarian trading opportunities
+* Explore the relationship between sentiment scores and PnL
+
+---
 
 ## 🗂️ Dataset Information
 
-**Files included**
-- `trades.csv` — 211,224 trading records  
-- `sentiment.csv` — 2,644 daily Fear‑Greed Index readings  
-- `merged_dataset.csv` — 35,864 trades aligned with sentiment data  
+### 📁 Files Used
 
-**Date Range:** January 2023 – May 2025  
-**Key Columns:** `Date`, `PnL`, `Trade_Type` (BUY/SELL), `Sentiment_Class`, `Sentiment_Score`
+| File Name | Description |
+|---|---|
+| `trades.csv` | Historical cryptocurrency trading records |
+| `sentiment.csv` | Fear & Greed Index daily readings |
+| `merged_dataset.csv` | Final merged dataset for analysis |
 
-## ⚙️ Data Processing & Methodology
+### 📅 Date Range
 
-1. **Data cleaning & merging**
-   - Standardized timestamps, removed invalid records, and performed an inner join on date.
-2. **Feature engineering**
-   - Binned sentiment scores into categories: Extreme Fear, Fear, Neutral, Greed, Extreme Greed.
-   - Computed summary statistics (mean, median, std) for PnL.
-3. **Analysis**
-   - Aggregations by sentiment class and trade direction.
-   - Volatility (std) and risk‑reward profiling.
-   - Correlation analysis between sentiment score and PnL.
+January 2023 – May 2025
 
+### 📌 Key Features
 
-## 📈 Key Findings
+* Date
+* PnL (Profit & Loss)
+* Trade Type (BUY/SELL)
+* Sentiment Score
+* Sentiment Class
 
-- **Extreme Greed:** Highest average returns ($205.82) and highest volatility ($1,861.56). High risk, high reward.  
-- **Fear:** Second-highest returns ($128.29) with substantial volatility — long positions during Fear were surprisingly profitable.  
-- **Extreme Fear:** Lowest returns ($1.89) and lowest volatility ($76.73) — capital preservation phase.  
-- **Strategy insight:** Contrarian strategies work well — short during Extreme Greed, long during Fear.
+---
 
+## ⚙️ Technologies Used
 
-## 📉 Visuals Included
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Jupyter Notebook
 
-Include these figures in the notebook and insert into the report:
-- **Figure 1:** Distribution of Sentiment Classes *(Placeholder)*  
-- **Figure 2:** PnL Distribution Histogram *(Placeholder)*  
-- **Figure 3:** PnL by Sentiment Boxplot *(Placeholder)*  
-- **Figure 4:** BUY vs SELL Performance per Sentiment *(Placeholder)*  
-- **Figure 5:** Volatility vs Mean PnL Scatter *(Placeholder)*  
-- **Figure 6:** Sentiment vs PnL Correlation Heatmap *(Placeholder)*
+---
 
+## 🔄 Data Processing Pipeline
 
-## 🧾 Report
+1. Cleaned and standardized trading data
+2. Processed sentiment dataset
+3. Merged datasets using date alignment
+4. Categorized sentiment into:
 
-### The full project report, “Trader_Performance_Sentiment_Report.docx”, contains:
+   * Extreme Fear
+   * Fear
+   * Neutral
+   * Greed
+   * Extreme Greed
 
-- Executive Summary
+5. Performed statistical and visual analysis
 
-- Data Overview
+---
 
-- Exploratory Analysis
+## 📈 Key Insights
 
-- Statistical Results
+### 🚀 Extreme Greed
 
-- Insights, Recommendations, and Limitations
+* Highest average returns
+* Highest market volatility
+* High-risk, high-reward environment
 
-## 💻 Tools & Technologies
+### 📉 Fear
 
-- Python Libraries: pandas, matplotlib, seaborn, numpy
+* Surprisingly profitable for long positions
+* Strong contrarian trading opportunities
 
-- Notebook: Jupyter Notebook
+### 🛡️ Extreme Fear
 
-- Visualization: Matplotlib/Seaborn
+* Lowest volatility
+* Lowest profitability
+* Suitable for capital preservation
 
-- Documentation: Microsoft Word
+### 💡 Strategy Insight
 
-## 🚀 How to Run
+Contrarian strategies performed better:
 
-- Download all files (.ipynb, .csv, .docx) into the same folder.
+* Short during Extreme Greed
+* Long during Fear
 
-- Open notebook_1.ipynb in Jupyter Notebook or Google Colab.
+---
 
-- Run all cells sequentially to reproduce the analysis.
+## 📊 Visualizations
 
-- View visuals and statistical results directly in the notebook.
+The project includes:
 
-## 📚 Future Enhancements
+* Sentiment distribution analysis
+* PnL distribution histogram
+* PnL by sentiment boxplots
+* BUY vs SELL comparison charts
+* Volatility vs PnL analysis
+* Correlation heatmap
 
-- Add time-series sentiment trend analysis.
+---
 
-- Build a predictive model using sentiment and PnL.
+## 💼 Business Impact
 
-- Automate dashboard visualization for real-time insights.
+This analysis helps:
 
-👤 Author
+* Traders optimize strategies using sentiment
+* Portfolio managers improve risk allocation
+* Analysts understand market psychology
+* Risk teams monitor volatility patterns
 
-Sreekanth Reddy Polu
+---
 
-<p>📩 Email: <a href="mailto:polusreekanthreddys@gmail.com">polusreekanthreddys@gmail.com</a></p>
+## 📁 Project Structure
+
+```text
+├── notebook_1.ipynb
+├── trades.csv
+├── sentiment.csv
+├── merged_dataset.csv
+├── ds_report.pdf
+└── README.md
+```
+
+---
+
+## ▶️ How to Run
+
+1. Clone this repository
+
+2. Install required libraries
+
+```bash
+pip install pandas numpy matplotlib seaborn
+```
+
+3. Open Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+4. Run `notebook_1.ipynb`
+
+---
+
+## 📌 Future Enhancements
+
+* Time-series sentiment trend analysis
+* Predictive machine learning model
+* Interactive dashboard development
+* Real-time sentiment integration
+
+---
+
+## 👨‍💻 Author
+
+### Sreekanth Reddy Polu
+
+📧 Email: polusreekanthreddys@gmail.com
